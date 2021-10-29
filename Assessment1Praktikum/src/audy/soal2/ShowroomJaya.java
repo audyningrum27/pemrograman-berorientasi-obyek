@@ -11,10 +11,11 @@ public class ShowroomJaya {
 
         Mobil m1 = new Mobil("Avanza", "2018", 150, 5);
         arrMobil.add(m1);
+        
         do {
             int pilih;
 
-            System.out.println("1. Lihat stok mobil");
+            System.out.println("1. Lihat daftar mobil");
             System.out.println("2. Tambah mobil");
             System.out.println("3. Beli mobil");
             System.out.println("4. Keluar");
@@ -40,6 +41,7 @@ public class ShowroomJaya {
                     int stok = Integer.parseInt(input.nextLine());
                     arrMobil.add(new Mobil(merk, tahunKeluaran, harga, stok));
                     break;
+                    
                 case 3:
                     System.out.print("Masukan merk mobil yang dibeli: ");
                     beli = input.nextLine();
@@ -53,11 +55,13 @@ public class ShowroomJaya {
 
                     if (mobilDibeli != null) {
                         arrMobil.remove(mobilDibeli);
+                        System.out.println("Mobil telah dibeli");
                     } else {
                         System.out.println("Mobil tidak ada");
                     }
 
                 case 4:
+                    keluar = true;
                     System.out.println("\nKeluar");
                     break;
 
@@ -66,6 +70,7 @@ public class ShowroomJaya {
                     break;
             }
         } while(!keluar);
+
         System.out.println("-------");
     }
 }
