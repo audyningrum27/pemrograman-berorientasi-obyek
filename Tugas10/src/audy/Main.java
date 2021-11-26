@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Main {
     private Scanner input = new Scanner(System.in);
-    ArrayList<Member> member = new ArrayList<>();
+    static ArrayList<Member> member = new ArrayList<>();
 
     public void inputMember() {
         System.out.println("1. Driver");
@@ -35,10 +35,6 @@ public class Main {
     }
 
     public void displayMember() {
-        Driver driver1 = new Driver("Audy", "1000", "0822", 120000, "1233", "Mobil");
-        Customer customer1 = new Customer("Nurul", "2000", "0813", 50000);
-        member.add(driver1);
-        member.add(customer1);
         System.out.println("1. Driver");
         System.out.println("2. Customer");
         System.out.print("Pilihan Anda: ");
@@ -79,6 +75,8 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        member.add(new Driver("Audy", "1000", "0822", 120000, "1233", "Mobil"));
+        member.add(new Customer("Nurul", "2000", "0813", 50000));
         new Main().tampil();
     }
 }

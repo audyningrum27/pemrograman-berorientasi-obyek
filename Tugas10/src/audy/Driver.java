@@ -11,9 +11,13 @@ public class Driver extends Member{
     }
 
     @Override
+    public double getSaldo() {
+        return saldo;
+    }
+
     public void display() {
         super.display();
-        System.out.println("No Plat: " + this.noPlat +
-                "\nJenis Kendaraan: " + this.jenis + "\n");
+        System.out.println("No Plat: " + noPlat +
+                "\nJenis Kendaraan: " + jenis + "\n");
     }
 }

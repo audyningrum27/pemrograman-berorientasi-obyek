@@ -1,6 +1,6 @@
 package audy;
 
-public class Member {
+public abstract class Member {
     protected String nama, nik, noTelp;
     protected double saldo;
 
@@ -11,10 +11,12 @@ public class Member {
         this.saldo = saldo;
     }
 
+    public abstract double getSaldo();
+
     public void display() {
-        System.out.println("Nama: " + this.nama +
-                "\nNIK: " + this.nik +
-                "\nNo Telp: " + this.noTelp +
-                "\nSaldo: " + this.saldo);
+        System.out.println("Nama: " + nama +
+                "\nNIK: " + nik +
+                "\nNo Telp: " + noTelp +
+                "\nSaldo: " + saldo);
     }
 }
